@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var checkAmount = 0.0
-    //add focus and add button somehow on the screen, to remove the focus. to remove the numerical keyboard when not needed.
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
     @FocusState private var amountIsFocused: Bool
