@@ -18,7 +18,7 @@ struct ContentView: View {
     
     
     let tipPercentages = Array(0..<101)
-                               
+    
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
@@ -92,19 +92,18 @@ struct ContentView: View {
         }
     }
 }
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-
-let locale = Locale(identifier: "ka_GE")
-
-func currencyFormat() -> FloatingPointFormatStyle<Double>.Currency {
-    return .currency(code: locale.currency?.identifier ?? "GEL")
 }
 
-//And this is something that they would never ever use in georgia
-///But still funny
+let locale = Locale(identifier: "fr_FR")
+
+func currencyFormat() -> FloatingPointFormatStyle<Double>.Currency {
+    return .currency(code: locale.currency?.identifier ?? "EUR")
+}
+
+//Changed currency from GEL to EUR
